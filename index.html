@@ -17,23 +17,29 @@
       <header>
         <h1>AutomataProject</h1>
       </header>
-      <p>V1</p>
+      
       <section>
+      	<p>V1.01</p>
         <input type="file" id="files"/>
         <output id="list"></output>
         <script>
-          function handleFileSelect(evt) {
-            var files = evt.target.files[0]; // FileList object
-            if (!files) {
-              alert("Failed to load file");
-            } else if (!files.type.match('text.*')) {
-		alert(files.name + " is not a valid text file");
-            } else {
-              alert("Success!");
-            }
-            // files is a FileList of File objects. List some properties.
-            var output = [];
-          }
+		if (window.File && window.FileReader && window.FileList && window.Blob) {
+	  		function handleFileSelect(evt) {
+	            		var files = evt.target.files[0]; // FileList object
+	            		if (!files) {
+	              			alert("Failed to load file");
+	            		} else if (!files.type.match('text.*')) {
+					alert(files.name + " is not a valid text file");
+	            		} else {
+	              			alert("Success!");
+	            		}
+	            		// files is a FileList of File objects. List some properties.
+	        		 var output = [];
+	          	}
+		} else {
+  		alert('The File APIs are not fully supported by your browser.');
+		}
+          	
         </script>
       </section>
       <section>
