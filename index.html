@@ -19,26 +19,28 @@
       </header>
       
       <section>
-      	<p>V1.01</p>
+      	<p>V1.02</p>
         <input type="file" id="files"/>
-        <output id="list"></output>
+        <button type="button"> Execute automata </button>
         <script>
-		if (window.File && window.FileReader && window.FileList && window.Blob) {
-	  		function handleFileSelect(evt) {
-	            		var files = evt.target.files[0]; // FileList object
-	            		if (!files) {
-	              			alert("Failed to load file");
-	            		} else if (!files.type.match('text.*')) {
-					alert(files.name + " is not a valid text file");
-	            		} else {
-	              			alert("Success!");
-	            		}
-	            		// files is a FileList of File objects. List some properties.
-	        		 var output = [];
-	          	}
-		} else {
-  		alert('The File APIs are not fully supported by your browser.');
+		
+  	function handleFileSelect(evt) {
+  		if (window.File && window.FileReader && window.FileList && window.Blob) {
+            		var files = evt.target.files[0]; // FileList object
+            		if (!files) {
+              			alert("Failed to load file");
+            		} else if (!files.type.match('text.*')) {
+				alert(files.name + " is not a valid text file");
+            		} else {
+              			alert("Success!");
+            		}
+            		// files is a FileList of File objects. List some properties.
+        		 var output = [];
+  		} else {
+	  		alert('The File APIs are not fully supported by your browser.');
 		}
+  	}
+		
           	
         </script>
       </section>
