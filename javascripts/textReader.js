@@ -1,7 +1,7 @@
 // JavaScript source code
 window.onload = function () {
     var fileInput = document.getElementById('file');
-    var fileDisplayArea = document.getElementById('fileDisplayArea');
+    var fileDisplayArea = document.getElementById('demo');
 
     fileInput.addEventListener('change', function (e) {
         var file = fileInput.files[0];
