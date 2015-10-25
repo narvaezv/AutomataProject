@@ -19,7 +19,7 @@
       </header>
       
       <section>
-      	<p>V1.031</p>
+      	<p>V1.032</p>
       	<p id="demo"></p>
         <input type="file" id="file"/>
         <script>
@@ -40,7 +40,7 @@
 			  };
 			  reader.readAsText(file);
 			} else {
-		  		alert('The File APIs are not fully supported by your browser.');
+		  		document.getElementById("demo").innerHTML = "Outside";
 			}
 		};
 		
