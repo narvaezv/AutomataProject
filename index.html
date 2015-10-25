@@ -23,7 +23,14 @@
         <script>
           function handleFileSelect(evt) {
             var files = evt.target.files; // FileList object
-        
+            if (!f) {
+              alert("Failed to load file");
+            } else if (!file.type.match('text.*')) {
+		          alert(f.name + " is not a valid text file.);
+            } else {
+              var r = new FileReader();
+              //proceed with read…
+            }
             // files is a FileList of File objects. List some properties.
             var output = [];
             
