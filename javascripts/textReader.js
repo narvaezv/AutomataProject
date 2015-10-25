@@ -8,10 +8,16 @@ window.onload = function () {
         var textType = /text.*/;
         if (file.type.match(textType)) {
             var reader = new FileReader();
-            reader.onload = function (e) {
-                fileDisplayArea.innerText = reader.result + "Huawei";
+            reader.onload = function (event) {
+                //Read lines
+                var results;
+                var lines = fileInput.result.split("\n");
+                for (var line = 0; line < lines.length; line++) {
+                    results += line[line] + "\n";
+                }
+                fileDisplayArea.innerText = results;
             }
-            reader.readAsText(file);
+            reader.readAsText(file);    
         } else {
             fileDisplayArea.innerText = "File not supported!"
         }
