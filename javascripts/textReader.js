@@ -9,7 +9,7 @@ window.onload = function () {
         if (file.type.match(textType)) {
             var reader = new FileReader();
             reader.onload = function (e) {
-                fileDisplayArea.innerText = reader.result;
+                fileDisplayArea.innerText = reader.result + "Huawei";
             }
             reader.readAsText(file);
         } else {
