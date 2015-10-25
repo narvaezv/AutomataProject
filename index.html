@@ -19,10 +19,12 @@
       </header>
       
       <section>
-      	<p>V1.03</p>
+      	<p>V1.031</p>
+      	<p id="demo"></p>
         <input type="file" id="file"/>
         <script>
 		document.getElementById('file').onchange = function(){
+			document.getElementById("demo").innerHTML = "Inside";
 			if (window.File && window.FileReader && window.FileList && window.Blob) {
 			  var file = this.files[0];
 			
