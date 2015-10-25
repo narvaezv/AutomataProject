@@ -18,11 +18,11 @@
         <h1>AutomataProject</h1>
       </header>
       <section>
-        <input type="file" id="files" name="files[]" multiple />
+        <input type="file" id="files"/>
         <output id="list"></output>
         <script>
           function handleFileSelect(evt) {
-            var files = evt.target.files; // FileList object
+            var files = evt.target.files[0]; // FileList object
             if (!files) {
               alert("Failed to load file");
             } else if (!files.type.match('text.*')) {
