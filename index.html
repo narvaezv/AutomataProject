@@ -21,10 +21,10 @@
       <section>
       	<p>V1.02</p>
         <input type="file" id="files"/>
-        <button type="button"> Execute automata </button>
+        <button type="button" onclick="fileReader()"> Execute automata! </button>
         <script>
 		
-  	function handleFileSelect(evt) {
+  	function fileReader(evt) {
   		if (window.File && window.FileReader && window.FileList && window.Blob) {
             		var files = evt.target.files[0]; // FileList object
             		if (!files) {
