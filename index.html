@@ -19,12 +19,30 @@
       </header>
       
       <section>
-      	<p>V1.02</p>
-        <input type="file" id="files"/>
-        <button type="button" onclick="fileReader()"> Execute automata! </button>
+      	<p>V1.03</p>
+        <input type="file" id="file"/>
         <script>
+		document.getElementById('file').onchange = function(){
+			if (window.File && window.FileReader && window.FileList && window.Blob) {
+			  var file = this.files[0];
+			
+			  var reader = new FileReader();
+			  reader.onload = function(progressEvent){
+			    // Entire file
+			    console.log(this.result);
+			    // By lines
+			    var lines = this.result.split('\n');
+			    for(var line = 0; line < lines.length; line++){
+			      console.log(lines[line]);
+			    }
+			  };
+			  reader.readAsText(file);
+			} else {
+		  		alert('The File APIs are not fully supported by your browser.');
+			}
+		};
 		
-  	function fileReader(evt) {
+  	/*function fileReader(evt) {
   		if (window.File && window.FileReader && window.FileList && window.Blob) {
             		var files = evt.target.files[0]; // FileList object
             		if (!files) {
@@ -39,7 +57,7 @@
   		} else {
 	  		alert('The File APIs are not fully supported by your browser.');
 		}
-  	}
+  	}*/
 		
           	
         </script>
