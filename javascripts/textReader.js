@@ -13,7 +13,8 @@ window.onload = function () {
                 var text = reader.result;
                 var lines = text.split("\n");
                 var results;
-                for (var line = 0; line < lines.length; line++) {
+                alert(lines.length);
+                for (var int = 0; int < lines.length; int++) {
                     results += line[line] + "lol\n";
                 }
                 fileDisplayArea.innerText = results;
