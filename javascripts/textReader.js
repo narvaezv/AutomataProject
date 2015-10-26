@@ -2,7 +2,7 @@
 window.onload = function () {
     var fileInput = document.getElementById('file');
     var fileDisplayArea = document.getElementById('demo');
-    var search = document.getElementById('search');
+    var search = document.getElementById('search').value;
 
     fileInput.addEventListener('change', function (e) {
         var file = fileInput.files[0];
@@ -18,7 +18,7 @@ window.onload = function () {
                 for (var int = 0; int < words.length; int++) {
                     stringAutomata(words[int]);
                 }
-                results += search + "asdasd </ul>";
+                results += search + " asdasd </ul>";
                 fileDisplayArea.innerHTML = results;
             }
             reader.readAsText(file);    
