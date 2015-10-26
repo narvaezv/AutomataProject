@@ -9,14 +9,14 @@ window.onload = function () {
         if (file.type.match(textType)) {
             var reader = new FileReader();
             reader.onload = function (event) {
-                alert("We're inner");
                 //Read lines
-                var results;
-                var lines = fileInput.result.split("\n");
-                for (var line = 0; line < lines.length; line++) {
+                var text = reader.result;
+                fileDisplayArea.innerText = text;
+
+                /*for (var line = 0; line < lines.length; line++) {
                     results += line[line] + "\n";
                 }
-                fileDisplayArea.innerText = results;
+                fileDisplayArea.innerText = results;*/
             }
             reader.readAsText(file);    
         } else {
