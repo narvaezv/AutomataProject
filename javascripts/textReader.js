@@ -9,6 +9,7 @@ window.onload = function () {
         if (file.type.match(textType)) {
             var reader = new FileReader();
             reader.onload = function (event) {
+                alert("We're inner");
                 //Read lines
                 var results;
                 var lines = fileInput.result.split("\n");
@@ -19,7 +20,7 @@ window.onload = function () {
             }
             reader.readAsText(file);    
         } else {
-            alert("Not supported");
+            alert("File not supported");
             fileDisplayArea.innerText = "File not supported!"
         }
     });
