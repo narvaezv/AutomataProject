@@ -17,6 +17,7 @@ window.onload = function () {
                     var thisLine = lines[int];
                     var words = thisLine.split(" ");//Split words
                     for (var jint = 0; jint < words.length; jint++) {
+                        alert("inside");
                         var check = stringAutomata(words[int], search);
                     }
                     if (check == true) {
