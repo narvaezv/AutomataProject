@@ -12,9 +12,9 @@ window.onload = function () {
                 //Read lines
                 var text = reader.result;
                 var lines = text.split("\n");
-                var result;
+                var results;
                 for (var line = 0; line < lines.length; line++) {
-                    results += line[line] + "\n";
+                    results += line[line] + "lol\n";
                 }
                 fileDisplayArea.innerText = results;
             }
