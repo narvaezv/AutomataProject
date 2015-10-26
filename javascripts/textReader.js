@@ -18,7 +18,7 @@ window.onload = function () {
                     results += "<li>" + line[line] + "</li>";
                 }
                 results += "</ul>";
-                fileDisplayArea.innerText = results;
+                fileDisplayArea.innerHTML = results;
             }
             reader.readAsText(file);    
         } else {
