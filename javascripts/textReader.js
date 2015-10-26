@@ -2,7 +2,6 @@
 window.onload = function () {
     var fileInput = document.getElementById('file');
     var fileDisplayArea = document.getElementById('demo');
-    var search = document.getElementById('search').value;
 
     fileInput.addEventListener('change', function (e) {
         var file = fileInput.files[0];
@@ -10,6 +9,7 @@ window.onload = function () {
         if (file.type.match(textType)) {
             var reader = new FileReader();
             reader.onload = function (event) {
+                var search = document.getElementById('search').value;
                 //Read lines
                 var text = reader.result;
                 var lines = text.split("\n"); //Split lines
