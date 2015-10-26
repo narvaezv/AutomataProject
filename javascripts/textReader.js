@@ -37,7 +37,7 @@ window.onload = function () {
 }
 
 function stringAutomata(string, search) {
-    alert("word");
+    alert(string + " " + search);
     if(string.toLowerCase() == search.toLowerCase){
         return 1;
     } else {
