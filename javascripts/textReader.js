@@ -38,7 +38,7 @@ window.onload = function () {
 
 function stringAutomata(string, search) {
     alert(string + " " + search);
-    if (string.toLowerCase() == search.toLowerCase) {
+    if (string.toLowerCase() == search.toLowerCase()) {
         alert(string + "es igual a" + search);
         return 1;
     } else {
