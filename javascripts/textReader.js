@@ -15,13 +15,13 @@ window.onload = function () {
                 var results = "<ul>";
                 for (var int = 0; int < lines.length; int++) { //Check each word
                     results += "<li>" + lines[int] + "</li>";
-                    //var words = lines[int].split(" ");//Split words
+                    var words = text.split(" ");//Split words
                     alert("inside"+lines.length);
                     for (var jint = 0; jint < words.length; jint++) {
                         var check = stringAutomata(words[int], search);
                     }
                     if (check) {
-                        results += "<li>"+lines[int]+"</li>";
+                        //results += "<li>"+lines[int]+"</li>";
                     }
                 }
                 results += "</ul>";
