@@ -15,12 +15,11 @@ window.onload = function () {
                 var results = "<ul>";
                 for (var int = 0; int < lines.length; int++) { //Check each word
                     var thisLine = lines[int];
-                    alert(thisLine);
                     var words = thisLine.split(" ");//Split words
                     for (var jint = 0; jint < words.length; jint++) {
                         var check = stringAutomata(words[int], search);
                     }
-                    if (check) {
+                    if (check == true) {
                         results += "<li>"+lines[int]+"</li>";
                     }
                 }
