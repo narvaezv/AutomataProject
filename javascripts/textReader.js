@@ -11,7 +11,7 @@ window.onload = function () {
             reader.onload = function (event) {
                 //Read lines
                 var text = reader.result;
-                var lines = text.split("\n");
+                var lines = text.split(" ");
                 var results = "<ul>";
                 alert(lines.length);
                 for (var int = 0; int < lines.length; int++) {
