@@ -23,7 +23,7 @@ window.onload = function () {
                     }
                     if (check > 0) {
                         var times = int + 1;
-                        results += "<li>"+lines[int]+"-in line "+ times + "- <" + check+ " times> </li>";
+                        results += "<li>"+lines[int]+"  -in line "+ times + "-   <" + check+ " times> </li>";
                     }
                 }
                 results += "</ul>";
