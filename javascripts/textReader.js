@@ -15,7 +15,7 @@ window.onload = function () {
                 var results = "<ul>";
                 alert(lines.length);
                 for (var int = 0; int < lines.length; int++) {
-                    results += "<li>" + line[line] + "</li>";
+                    results += "<li>" + lines[int] + "</li>";
                 }
                 results += "</ul>";
                 fileDisplayArea.innerHTML = results;
