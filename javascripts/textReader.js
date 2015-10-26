@@ -18,7 +18,7 @@ window.onload = function () {
                 for (var int = 0; int < words.length; int++) {
                     stringAutomata(words[int]);
                 }
-                results += search + "</ul>";
+                results += search + "asdasd </ul>";
                 fileDisplayArea.innerHTML = results;
             }
             reader.readAsText(file);    
