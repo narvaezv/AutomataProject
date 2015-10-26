@@ -15,6 +15,7 @@ window.onload = function () {
                 var results = "<ul>";
                 for (var int = 0; int < lines.length; int++) { //Check each word
                     var words = lines[int].split(" ");//Split words
+                    results += "<li>" + lines[int] + "</li>";
                     alert("inside"+lines.length);
                     for (var jint = 0; jint < words.length; jint++) {
                         var check = stringAutomata(words[int], search);
