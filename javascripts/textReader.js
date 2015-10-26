@@ -10,13 +10,12 @@ window.onload = function () {
             var reader = new FileReader();
             reader.onload = function (event) {
                 var search = document.getElementById('search').value;
-                //Read lines
                 var text = reader.result;
-                var lines = text.split("\n"); //Split lines
-                var words = text.split(" "); //Split words
+                var lines = text.split("\n");//Split lines
+                var words = text.split(" ");//Split words
                 var results = "<ul>";
                 for (var int = 0; int < words.length; int++) {
-                    stringAutomata(words[int]);
+                    stringAutomata(words[int], search);
                 }
                 results += search + " asdasd </ul>";
                 fileDisplayArea.innerHTML = results;
@@ -29,6 +28,8 @@ window.onload = function () {
     });
 }
 
-function stringAutomata(string) {
-
+function stringAutomata(string, search) {
+    if(string.toLowerCase() == search.toLowerCase()){
+        alert("There is an equal word");
+    }
 }
