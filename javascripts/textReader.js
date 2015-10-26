@@ -2,6 +2,7 @@
 window.onload = function () {
     var fileInput = document.getElementById('file');
     var fileDisplayArea = document.getElementById('demo');
+    var search = document.getElementById('search');
 
     fileInput.addEventListener('change', function (e) {
         var file = fileInput.files[0];
@@ -11,13 +12,13 @@ window.onload = function () {
             reader.onload = function (event) {
                 //Read lines
                 var text = reader.result;
-                var lines = text.split("");
+                var lines = text.split("\n"); //Split lines
+                var words = text.split(" "); //Split words
                 var results = "<ul>";
-                alert(lines.length);
-                for (var int = 0; int < lines.length; int++) {
-                    results += "<li>" + lines[int] + "</li>";
+                for (var int = 0; int < words.length; int++) {
+                    stringAutomata(words[int]);
                 }
-                results += "</ul>";
+                results += search + "</ul>";
                 fileDisplayArea.innerHTML = results;
             }
             reader.readAsText(file);    
@@ -28,3 +29,6 @@ window.onload = function () {
     });
 }
 
+function stringAutomata(string) {
+
+}
