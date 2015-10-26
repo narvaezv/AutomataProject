@@ -35,10 +35,8 @@ window.onload = function () {
 
 function stringAutomata(string, search) {
     if(string.toLowerCase() == search.toLowerCase()){
-        alert("There is an equal word");
         return true;
     } else {
-        alert("There is no equal word");
         return false;
     }
 }
