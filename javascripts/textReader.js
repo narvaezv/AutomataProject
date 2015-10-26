@@ -12,12 +12,17 @@ window.onload = function () {
                 var search = document.getElementById('search').value;
                 var text = reader.result;
                 var lines = text.split("\n");//Split lines
-                var words = text.split(" ");//Split words
                 var results = "<ul>";
-                for (var int = 0; int < words.length; int++) {
-                    stringAutomata(words[int], search);
+                for (var int = 0; int < lines.length; int++) { //Check each word
+                    var words = text.split(" ");//Split words
+                    for (var jint = 0; jint < words.length; jint++) {
+                        var check = stringAutomata(words[int], search);
+                    }
+                    if (check) {
+                        results += "<li>"+lines[int]+"</li>";
+                    }
                 }
-                results += search + " asdasd </ul>";
+                results += "</ul>";
                 fileDisplayArea.innerHTML = results;
             }
             reader.readAsText(file);    
@@ -31,5 +36,9 @@ window.onload = function () {
 function stringAutomata(string, search) {
     if(string.toLowerCase() == search.toLowerCase()){
         alert("There is an equal word");
+        return true;
+    } else {
+        alert("There is no equal word");
+        return false;
     }
 }
