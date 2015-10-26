@@ -14,13 +14,12 @@ window.onload = function () {
                 var lines = text.split("\n");//Split lines
                 var results = "<ul>";
                 for (var int = 0; int < lines.length; int++) { //Check each word
-                    var words = text.split(" ");//Split words
-                    results += "<li>" + lines[int] + "</li>";
+                    var words = lines[int].split(" ");//Split words
                     for (var jint = 0; jint < words.length; jint++) {
                         var check = stringAutomata(words[int], search);
                     }
                     if (check) {
-                        //results += "<li>"+lines[int]+"</li>";
+                        results += "<li>"+lines[int]+"</li>";
                     }
                 }
                 results += "</ul>";
