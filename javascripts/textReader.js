@@ -12,13 +12,11 @@ window.onload = function () {
                 //Read lines
                 var text = reader.result;
                 var lines = text.split("\n");
-
-                fileDisplayArea.innerText = lines[0];
-
-                /*for (var line = 0; line < lines.length; line++) {
+                var result;
+                for (var line = 0; line < lines.length; line++) {
                     results += line[line] + "\n";
                 }
-                fileDisplayArea.innerText = results;*/
+                fileDisplayArea.innerText = results;
             }
             reader.readAsText(file);    
         } else {
