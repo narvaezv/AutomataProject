@@ -22,7 +22,7 @@ window.onload = function () {
                         check += stringAutomata(words[jint], search);
                     }
                     if (check > 0) {
-                        results += "<li>"+lines[int]+" in line "+ int +"</li>";
+                        results += "<li>"+lines[int]+"- in line "+ int+1 + check+ " times - </li>";
                     }
                 }
                 results += "</ul>";
