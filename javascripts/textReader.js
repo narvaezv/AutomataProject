@@ -19,6 +19,7 @@ window.onload = function () {
             }
             reader.readAsText(file);    
         } else {
+            alert("Not supported");
             fileDisplayArea.innerText = "File not supported!"
         }
     });
