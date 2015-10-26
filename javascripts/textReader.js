@@ -15,14 +15,14 @@ window.onload = function () {
                 var results = "<ul>";
                 for (var int = 0; int < lines.length; int++) { //Check each word
                     //var thisLine = lines[int];
-                    results += "<li>" + thisLine + "</li>";
-                    var words = thisLine.split(" ");//Split words
+                    results += "<li>" + lines[int] + "</li>";
+                    /*var words = thisLine.split(" ");//Split words
                     for (var jint = 0; jint < words.length; jint++) {
                         var check = stringAutomata(words[int], search);
                     }
                     if (check == true) {
-                        //results += "<li>"+lines[int]+"</li>";
-                    }
+                        results += "<li>"+lines[int]+"</li>";
+                    }*/
                 }
                 results += "</ul>";
                 fileDisplayArea.innerHTML = results;
