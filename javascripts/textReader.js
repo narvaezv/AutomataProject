@@ -19,7 +19,7 @@ window.onload = function () {
                     //results += "<li>" + thisLine + "</li>";
                     var words = thisLine.split(" ");//Split words
                     for (var jint = 0; jint < words.length; jint++) {
-                        stringAutomata(words[jint], search);
+                        check += stringAutomata(words[jint], search);
                     }
                     if (check > 0) {
                         results += "<li>"+lines[int]+"</li>";
@@ -37,9 +37,7 @@ window.onload = function () {
 }
 
 function stringAutomata(string, search) {
-    alert(string + " " + search);
     if (string.toLowerCase() == search.toLowerCase()) {
-        alert(string + "es igual a" + search);
         return 1;
     } else {
         return 0;
