@@ -22,7 +22,8 @@ window.onload = function () {
                     }
                     if (check > 0) {
                         var times = int + 1;
-                        results += "<li>Line "+ times + ". " + check + " times. <ul>" + thisLine + "</ul> </li>";
+                        var string = "<li>Line " + times + ". " + check + " times. <ul>" + thisLine + "</ul> </li>"
+                        results += string;
                     }
                 }
                 results += "</ul>";
@@ -37,6 +38,7 @@ window.onload = function () {
 }
 
 function stringAutomata(string, search) {
+    alert("inside");
     if (string.toLowerCase() == search.toLowerCase()) {
         alert(string, search);
         return 1;
