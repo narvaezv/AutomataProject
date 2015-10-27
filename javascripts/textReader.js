@@ -13,7 +13,7 @@ window.onload = function () {
                 var text = reader.result;
                 var lines = text.split("\n");//Split lines
                 var results = "<ul>";
-                for (var int = 0; int < lines.length; int++) { //Check each word
+                for (var int = 0; int < lines.length; int++) { //Check each line
                     var thisLine = lines[int];
                     var check = 0;
                     var words = thisLine.split(" ");//Split words
@@ -22,7 +22,7 @@ window.onload = function () {
                     }
                     if (check > 0) {
                         var times = int + 1;
-                        results += "<li>Line "+ times + ". " + check + " times. <ul>" + lines[int] + "</ul> </li>";
+                        results += "<li>Line "+ times + ". " + check + " times. <ul>" + thisLine + "</ul> </li>";
                     }
                 }
                 results += "</ul>";
@@ -38,6 +38,7 @@ window.onload = function () {
 
 function stringAutomata(string, search) {
     if (string.toLowerCase() == search.toLowerCase()) {
+        alert(string, search);
         return 1;
     } else {
         return 0;
