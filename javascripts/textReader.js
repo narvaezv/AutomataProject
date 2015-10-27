@@ -38,9 +38,7 @@ window.onload = function () {
 }
 
 function stringAutomata(string, search) {
-    alert("inside " + string + search);
     if (string.toLowerCase() == search.toLowerCase()) {
-        alert(string + search);
         return 1;
     } else {
         return 0;
