@@ -16,14 +16,13 @@ window.onload = function () {
                 for (var int = 0; int < lines.length; int++) { //Check each word
                     var thisLine = lines[int];
                     var check = 0;
-                    //results += "<li>" + thisLine + "</li>";
                     var words = thisLine.split(" ");//Split words
                     for (var jint = 0; jint < words.length; jint++) {
                         check += stringAutomata(words[jint], search);
                     }
                     if (check > 0) {
                         var times = int + 1;
-                        results += "<li>"+lines[int]+"  -in line "+ times + "-   <" + check+ " times> </li>";
+                        results += "<li>Line "+ times + ". " + check + " times. <ul>" + lines[int] + "</ul> </li>";
                     }
                 }
                 results += "</ul>";
